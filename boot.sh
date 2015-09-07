@@ -2,6 +2,14 @@
 
 . settings.sh
 
+mkdir -p $CLOUDINIT_ISO_DIR
+cd $CLOUDINIT_ISO_SRC_DIR
+genisoimage \
+    -output $CLOUDINIT_ISO \
+    -volid cidata \
+    -joliet \
+    -rock user-data meta-data
+
 cp $RAW $BACKING_FILE
 chmod u+w $BACKING_FILE
 virt-install \
