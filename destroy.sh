@@ -3,11 +3,11 @@
 . settings.sh
 
 virsh \
-    --connect qemu:///session \
+    --connect $VIRSH_URL \
     destroy $INSTANCE_NAME
 
 virsh \
-    --connect qemu:///session \
+    --connect $VIRSH_URL \
     undefine $INSTANCE_NAME
 
 rm -f $BACKING_FILE

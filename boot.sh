@@ -5,6 +5,7 @@
 cp $RAW $BACKING_FILE
 chmod u+w $BACKING_FILE
 virt-install \
+    --connect $VIRSH_URL \
     --name $INSTANCE_NAME \
     --ram=$RAM \
     --disk path=$BACKING_FILE \

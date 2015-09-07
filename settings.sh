@@ -1,3 +1,5 @@
+VIRSH_URL=qemu:///system
+
 IMAGE_NAME=Fedora-Cloud-Base-20141203-21.x86_64
 
 RAW_IMAGES_DIR=~/images
