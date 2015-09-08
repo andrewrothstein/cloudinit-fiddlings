@@ -10,4 +10,4 @@ virsh \
     --connect $VIRSH_URL \
     undefine $INSTANCE_NAME
 
-rm -f $BACKING_FILE
+rm -rf $BACKING_FILE $CLOUDINIT_ISO

@@ -10,8 +10,7 @@ genisoimage \
     -joliet \
     -rock user-data meta-data
 
-cp $RAW $BACKING_FILE
-chmod u+w $BACKING_FILE
+qemu-img create -b $RAW -f qcow2 -o size=1024G $BACKING_FILE
 virt-install \
     --connect $VIRSH_URL \
     --name $INSTANCE_NAME \
